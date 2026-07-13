@@ -44,6 +44,10 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: new URL("/", origin),
     },
     manifest: "/manifest.webmanifest",
+    icons: {
+      icon: "/og.png",
+      apple: "/og.png",
+    },
     robots: {
       index: true,
       follow: true,
@@ -75,8 +79,8 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#0e0e12",
-  colorScheme: "dark",
+  themeColor: "#FFFFFF",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -86,6 +90,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+        <link rel="apple-touch-icon" href="/og.png" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      </head>
       <body>{children}</body>
     </html>
   );

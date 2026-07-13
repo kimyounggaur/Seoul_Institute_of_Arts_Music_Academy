@@ -3,8 +3,17 @@
   "short_name": "서울예대음악",
   "description": "양천구 신정동 실용음악 레슨과 상담 안내",
   "lang": "ko-KR",
-  "start_url": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#0e0e12",
-  "theme_color": "#0e0e12"
+  "background_color": "#F6F7FB",
+  "theme_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "/og.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
 }
